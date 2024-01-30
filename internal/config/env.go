@@ -6,16 +6,18 @@ import (
 	"github.com/joho/godotenv"
 )
 
-type Env struct {
+type env struct {
 	DiscordAuthToken string
+	FortniteApiKey   string
 }
 
-func GetEnv() *Env {
+var Env *env
+
+func GetEnv() {
 	godotenv.Load()
 
-	env := Env{
+	Env = &env{
 		DiscordAuthToken: os.Getenv("DISCORD_AUTH_TOKEN"),
+		FortniteApiKey:   os.Getenv("FORTNITE_API_KEY"),
 	}
-
-	return &env
 }

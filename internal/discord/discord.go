@@ -8,9 +8,9 @@ import (
 )
 
 func InitSession() *discordgo.Session {
-	env := config.GetEnv()
+	config.GetEnv()
 
-	discord, err := discordgo.New("Bot " + env.DiscordAuthToken)
+	discord, err := discordgo.New("Bot " + config.Env.DiscordAuthToken)
 
 	if err != nil {
 		panic(err)
