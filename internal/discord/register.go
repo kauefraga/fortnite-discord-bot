@@ -7,4 +7,5 @@ import (
 
 func registerCommands(s *discordgo.Session) {
 	s.AddHandler(commands.Hello)
+	s.AddHandler(commands.DailyShop)
 }
