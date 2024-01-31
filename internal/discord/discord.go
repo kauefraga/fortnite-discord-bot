@@ -4,7 +4,7 @@ import (
 	"log"
 
 	"github.com/bwmarrin/discordgo"
-	"github.com/kauefraga/fortnite-discord-bot/internal/config"
+	"github.com/kauefraga/lau-discord-bot/internal/config"
 )
 
 func InitSession() *discordgo.Session {

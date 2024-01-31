@@ -2,7 +2,7 @@ package discord
 
 import (
 	"github.com/bwmarrin/discordgo"
-	"github.com/kauefraga/fortnite-discord-bot/internal/discord/commands"
+	"github.com/kauefraga/lau-discord-bot/internal/discord/commands"
 )
 
 func registerCommands(s *discordgo.Session) {

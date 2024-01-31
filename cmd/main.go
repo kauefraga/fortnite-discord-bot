@@ -6,7 +6,7 @@ import (
 	"os/signal"
 	"syscall"
 
-	"github.com/kauefraga/fortnite-discord-bot/internal/discord"
+	"github.com/kauefraga/lau-discord-bot/internal/discord"
 )
 
 func main() {
