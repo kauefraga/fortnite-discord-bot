@@ -8,6 +8,6 @@ RUN go mod download
 
 COPY . .
 
-RUN CGO_ENABLED=0 go build -o /bin/fortnite-discord-bot ./cmd/main.go
+RUN CGO_ENABLED=0 go build -o /bin/lau-discord-bot ./cmd/main.go
 
-ENTRYPOINT [ "/bin/fortnite-discord-bot" ]
+ENTRYPOINT [ "/bin/lau-discord-bot" ]
