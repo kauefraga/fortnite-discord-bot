@@ -10,18 +10,20 @@ import (
 )
 
 func main() {
-	discord := discord.InitSession()
+	s := discord.InitSession()
 
-	err := discord.Open()
+	err := s.Open()
 
 	if err != nil {
 		panic(err)
 	}
+
+	discord.RegisterSlashCommands(s)
 
 	log.Println("Bot is now running. Press CTRL-C to exit.")
 	sc := make(chan os.Signal, 1)
 	signal.Notify(sc, syscall.SIGINT, syscall.SIGTERM, os.Interrupt)
 	<-sc
 
-	defer discord.Close()
+	defer s.Close()
 }
