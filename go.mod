@@ -1,4 +1,4 @@
-module github.com/kauefraga/fortnite-discord-bot
+module github.com/kauefraga/lau-discord-bot
 
 go 1.21.0
 
