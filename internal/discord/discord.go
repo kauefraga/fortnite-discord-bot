@@ -16,6 +16,9 @@ func InitSession() *discordgo.Session {
 		panic(err)
 	}
 
+	discord.Identify.Presence.Game.Type = discordgo.ActivityTypeListening
+	discord.Identify.Presence.Game.Name = "/pickgame"
+
 	discord.AddHandler(func(s *discordgo.Session, r *discordgo.Ready) {
 		log.Println("Bot is ready")
 	})
